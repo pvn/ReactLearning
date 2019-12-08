@@ -1,6 +1,12 @@
 # React Native
    A React Native app is all about using **components** and then adding the **right layout**, the **right structure**
 
+## Documentation
+
+* [Tools](#required-tools)
+* [Installation](#installation)
+* [Styling](https://github.com/pvn/ReactLearning/blob/master/Styling.md)
+* [State and Events](https://github.com/pvn/ReactLearning/blob/master/State-Event.md)
 
 ### Required tools
     Node
@@ -12,7 +18,7 @@
 
 ### For Development OS: **macOS**     Target OS: **iOS**
 
-#### Installation of required tools one by one
+#### Installation
 1 - Node installation
         **brew install node**
     
@@ -37,9 +43,3 @@
     npm : Every npm install automatically add installed modules to both package.json and package-lock.json. This file is meant to be committed into the version control you are using.
 
     yarn: Yarn introduced workspaces. In combination with Lerna, it gives package authors a powerful toolset to manage the dependencies and of projects and also enables publishing to be a lot easier.
-
-
-
-### [Styling](https://github.com/pvn/ReactLearning/blob/master/Styling.md)
-
-### [State and Events](https://github.com/pvn/ReactLearning/blob/master/State-Event.md)
