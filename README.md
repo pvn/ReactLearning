@@ -91,13 +91,15 @@ const App: () => ReactNode = () => {
 //default we have initial state by passing empty string to useState as user has not entered anything
 const [productText, setProductText] = useState('')
 
-  return (
-	<View style={{padding: 100}}>
-			<View>
-				// onChangeText is a 'props' for TextInput
-				<TextInput placeholder="Enter Product" style={styles.input} onChangeText={productInputHandler} value={getProductText}
-			</View>
-		</View>
+return (
+<View style={{padding: 100}}>
+ <View>
+	// onChangeText is a 'props' for TextInput
+	<TextInput placeholder="Enter Product" style={styles.input} 
+	onChangeText={productInputHandler} 
+	value={getProductText}
+ </View>
+</View>
 );
 };
 ``````
@@ -114,14 +116,15 @@ function productInputHandler(enteredText) {
 	setProductText(enteredText)
 }
 
-  return (
-	<View style={{padding: 100}}>
-		<View>
-			// onChangeText is a 'props' for TextInput
-			//NOTE: do not add the parenthesis to productInputHandler because we do not want to run this function execute immediately until user type any thing to it
-				<TextInput placeholder="Enter Product" style={styles.input} onChangeText={productInputHandler}
-		</View>
-	</View>
+ return (
+<View style={{padding: 100}}>
+ <View>
+	// onChangeText is a 'props' for TextInput
+	<TextInput placeholder="Enter Product" style={styles.input} 
+	onChangeText={productInputHandler} 
+	value={getProductText}
+ </View>
+</View>
 );
 };
 ``````
