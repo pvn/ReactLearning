@@ -66,8 +66,8 @@ const styles = StyleSheet.create({
 });
 ```
 ### State and Events:
-We will use the **useState** hook for that which we import from React, not from ReactNative but from React. 
-We will create two constant here **productText** and **setProductText** with the help of **useState**
+We will use the  [useState](https://github.com/pandao/editor.md) hook for that which we import from React, not from ReactNative but from React. 
+We will create two constant here **productText** and **setProductText** with the help of [useState](https://github.com/pandao/editor.md)
 ``````javascript
 const App: () => ReactNode = () => {
 
@@ -80,11 +80,11 @@ const [productText, setProductText] = useState('')
 );
 };
 ``````
-Now we can bind this **useState** to textfield input, i.e. when user types a character, we will update the **useState** and we will save the entered product in the state. we can then access through getProduct. we will pass the getProduct value to back into the textfield input.
+Now we can bind this [useState](https://github.com/pandao/editor.md) to textfield input, i.e. when user types a character, we will update the [useState](https://github.com/pandao/editor.md) and we will save the entered product in the state. we can then access through getProduct. we will pass the getProduct value to back into the textfield input.
 
 > That's this two way binding, it's so called **controlled component** which you also know from React
 
-###### So lets bind useState to textfield input on **onChangeText**
+###### So lets bind [useState](https://github.com/pandao/editor.md) to textfield input on **onChangeText**
 ``````javascript
 const App: () => ReactNode = () => {
 
@@ -142,5 +142,6 @@ We can write the function as constant and then we can use that constant anywhere
 **Summarize: **
 > **onChangeText**={productinputhandler} **//on key stroke text**
 **value**={getProductText} **// key stroke value setting back to textfield**
+
 
 
