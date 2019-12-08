@@ -93,14 +93,14 @@ const [productText, setProductText] = useState('')
 
 return (
 <View style={{padding: 100}}>
- <View>
-	// onChangeText is a 'props' for TextInput
-	<TextInput placeholder="Enter Product" style={styles.input} 
-	onChangeText={productInputHandler} 
-	value={getProductText}
- </View>
-</View>
-);
+	<View>
+		// onChangeText is a 'props' for TextInput
+		<TextInput placeholder="Enter Product" style={styles.input} 
+						onChangeText={productInputHandler} 
+						value={getProductText}/>
+ 	</View>
+	</View>
+	);
 };
 ``````
 
@@ -118,14 +118,14 @@ function productInputHandler(enteredText) {
 
  return (
 <View style={{padding: 100}}>
- <View>
-	// onChangeText is a 'props' for TextInput
-	<TextInput placeholder="Enter Product" style={styles.input} 
-	onChangeText={productInputHandler} 
-	value={getProductText}
- </View>
-</View>
-);
+	<View>
+		// onChangeText is a 'props' for TextInput
+		<TextInput placeholder="Enter Product" style={styles.input} 
+						onChangeText={productInputHandler} 
+						value={getProductText}/>
+ 	</View>
+	</View>
+	);
 };
 ``````
 > //NOTE: do not add the parenthesis to productInputHandler because we do not want to run this function execute immediately until user type any thing to it
@@ -142,3 +142,32 @@ We can write the function as constant and then we can use that constant anywhere
 **Summarize: **
 > **onChangeText**={productinputhandler} **//on key stroke text**
 **value**={getProductText} **// key stroke value setting back to textfield**
+
+##### Similar to textinput, lets try with button and add the products to list by clicking on Add button
+
+``````javascript
+const App: () => ReactNode = () => {
+
+//default we have initial state by passing empty string to useState as user has not entered anything
+const [productText, setProductText] = useState('')
+// to useState hook we are passing empty lists
+const [products, setProducts] = useState([])
+
+const addProductHandler = () => { 
+		// we are storing the product with some random key, this would be useful while accessing the product using key
+		setProducts[...products, {key: Math.random().toString(), value: products}]
+}
+
+ return (
+<View style={{padding: 100}}>
+	<View>
+		// onChangeText is a 'props' for TextInput
+		<TextInput placeholder="Enter Product" style={styles.input} 
+						onChangeText={productInputHandler} 
+						value={getProductText}/>
+		<Button title="ADD" onPress={addProductHandler}/>
+ 	</View>
+	</View>
+	);
+};
+``````
