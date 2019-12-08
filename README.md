@@ -71,7 +71,8 @@ We will create two constant here **productText** and **setProductText** with the
 ``````javascript
 const App: () => ReactNode = () => {
 
-//default we have initial state by passing empty string to useState as user has not entered anything
+/*default we have initial state by passing empty string to useState 
+	as user has not entered anything*/
 const [productText, setProductText] = useState('')
 
   return (
@@ -88,7 +89,8 @@ Now we can bind this [useState](https://reactjs.org/docs/hooks-state.html) to te
 ``````javascript
 const App: () => ReactNode = () => {
 
-//default we have initial state by passing empty string to useState as user has not entered anything
+/*default we have initial state by passing empty string to useState 
+	as user has not entered anything*/
 const [productText, setProductText] = useState('')
 
 return (
@@ -109,7 +111,8 @@ return (
 ``````javascript
 const App: () => ReactNode = () => {
 
-//default we have initial state by passing empty string to useState as user has not entered anything
+/*default we have initial state by passing empty string to useState 
+	as user has not entered anything*/
 const [productText, setProductText] = useState('')
 
 function productInputHandler(enteredText) {
@@ -148,14 +151,16 @@ We can write the function as constant and then we can use that constant anywhere
 ``````javascript
 const App: () => ReactNode = () => {
 
-//default we have initial state by passing empty string to useState as user has not entered anything
+/*default we have initial state by passing empty string to useState 
+	as user has not entered anything*/
 const [productText, setProductText] = useState('')
 // to useState hook we are passing empty lists
 const [products, setProducts] = useState([])
 
 const addProductHandler = () => { 
-		// we are storing the product with some random key, this would be useful while accessing the product using key
-		setProducts[...products, {key: Math.random().toString(), value: products}]
+	/* we are storing the product with some random key, 
+	this would be useful while accessing the product using key*/
+	setProducts[...products, {key: Math.random().toString(), value: products}]
 }
 
  return (
@@ -165,7 +170,7 @@ const addProductHandler = () => {
 		<TextInput placeholder="Enter Product" style={styles.input} 
 						onChangeText={productInputHandler} 
 						value={getProductText}/>
-		<Button title="ADD" onPress={addProductHandler}/>
+		<Button title="Add Product" onPress={addProductHandler}/>
  	</View>
 	</View>
 	);
