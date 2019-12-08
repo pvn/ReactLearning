@@ -54,15 +54,86 @@ So it's not directly related to CSS but of course it's influenced by CSS, many o
 the keys are for style property names and the values are the values for these style properties, and these style property names are influenced by CSS.
 
 Ex:
-
  ```css
 <View styles={{ padding: 10 }}
- const styles = StyleSheet.create({
+     const styles = StyleSheet.create({
   	scrollView: {
     	backgroundColor: Colors.lighter,
   	},
   	body: {
     	backgroundColor: Colors.yellow,
   	}
-});
+	});
 ```
+### State and Events:
+We will use the **useState** hook for that which we import from React, not from ReactNative but from React. 
+We will create two constant here **getProductText** and **setProductText** with the help of **useState**
+``````javascript
+const App: () => ReactNode = () => {
+
+   //default we have initial state by passing empty string to useState as user has not entered anything
+      const [getProductText, setProductText] = useState('')
+
+     return (
+      <View style={{padding: 100}}>
+
+   );
+ };
+``````
+Now we can bind this **useState** to textfield input, i.e. when user types a character, we will update the **useState** and we will save the entered product in the state. we can then access through getProduct. we will pass the getProduct value to back into the textfield input.
+
+> That's this two way binding, it's so called **controlled component** which you also know from React
+
+###### So lets bind useState to textfield input on **onChangeText**
+``````javascript
+const App: () => ReactNode = () => {
+
+   //default we have initial state by passing empty string to useState as user has not entered anything
+      const [getProductText, setProductText] = useState('')
+
+     return (
+      <View style={{padding: 100}}>
+         <View>
+            // onChangeText is a 'props' for TextInput
+            <TextInput placeholder="Enter Product" style={styles.input} onChangeText={productInputHandler} value={getProductText}
+         </View>
+      </View>
+   );
+ };
+``````
+
+> onChangeText is a '**props**' for TextInput which takes a function '**productInputHandler**' that will execute on every change text by user to enter the product.
+
+``````javascript
+const App: () => ReactNode = () => {
+
+   //default we have initial state by passing empty string to useState as user has not entered anything
+      const [getProductText, setProductText] = useState('')
+
+   function productInputHandler(enteredText) {
+      setProductText(enteredText)
+   }
+
+     return (
+      <View style={{padding: 100}}>
+         <View>
+            // onChangeText is a 'props' for TextInput
+            //NOTE: do not add the parenthesis to productInputHandler because we do not want to run this function execute immediately until user type any thing to it
+            <TextInput placeholder="Enter Product" style={styles.input} onChangeText={productInputHandler}
+         </View>
+      </View>
+   );
+ };
+``````
+> //NOTE: do not add the parenthesis to productInputHandler because we do not want to run this function execute immediately until user type any thing to it
+
+We can write the function as constant and then we can use that constant anywhere 
+
+    function productInputHandler(enteredText) { setProductText(enteredText) }
+	
+	//can be written as constant
+    const productInputHandler = (enteredText) => { 
+		setProductText(enteredText) 
+	}
+
+
