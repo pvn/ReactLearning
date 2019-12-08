@@ -275,8 +275,8 @@ We can write the function as constant and then we can use that constant anywhere
 		setProductText(enteredText) 
 	}
 
-**Summarize: **
+**Summarize:**
 > **onChangeText**={productinputhandler} **//on key stroke text**
-**value**={getProductText} **// key stroke value setting back to textfield**
+> **value**={getProductText} **// key stroke value setting back to textfield**
 
 
