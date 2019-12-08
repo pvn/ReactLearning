@@ -55,4 +55,14 @@ the keys are for style property names and the values are the values for these st
 
 Ex:
 
-`<View styles={{**padding: 10**}}`
+ ```css
+<View styles={{ padding: 10 }}
+ const styles = StyleSheet.create({
+  	scrollView: {
+    	backgroundColor: Colors.lighter,
+  	},
+  	body: {
+    	backgroundColor: Colors.yellow,
+  	}
+});
+```
