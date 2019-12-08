@@ -40,7 +40,7 @@
 
 
 
-### Styling:
+### [Styling:] (https://github.com/pvn/ReactLearning/blob/master/Styling.md)
 
 it's important to understand that React Native doesn't use web technologies, it doesn't use HTML, it uses Javascript arguably but doesn't use HTML and it also doesn't use CSS, so CSS which you use for styling in the web is not supported in React.
 
