@@ -53,7 +53,6 @@ So it's not directly related to CSS but of course it's influenced by CSS, many o
 
 the keys are for style property names and the values are the values for these style properties, and these style property names are influenced by CSS.
 
-Ex: 
-<View styles={{**padding: 10**}}
+Ex:
 
-
+`<View styles={{**padding: 10**}}`
