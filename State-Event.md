@@ -109,3 +109,11 @@ const addProductHandler = () => {
 	);
 };
 ``````
+
+
+*Output*
+``````javascript
+<View>
+          {courseGoals.map((goal) => <Text>{goal.item}</Text>)}
+        </View>
+``````
