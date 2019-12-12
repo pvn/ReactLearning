@@ -12,3 +12,23 @@ Before learning the custom component, lets first understand about the most used 
     
     second property is *renderItem*, that takes a function which is called for every item
 
+For e.g.
+
+```javascript
+<Flatlist data={products}
+renderItem = {product => (
+....  // renderItem has to return a component so here we will return a View component for example.
+....
+)}
+/>
+```
+
+```javascript
+<Flatlist data={products}
+renderItem = {product => (
+<View style={styles.listItem}>
+    <Text>{product.item.value}</Text>
+</View>
+)}
+/>
+```
