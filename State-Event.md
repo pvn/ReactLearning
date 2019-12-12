@@ -114,6 +114,6 @@ const addProductHandler = () => {
 *Output*
 ``````javascript
 <View>
-          {courseGoals.map((goal) => <Text>{goal.item}</Text>)}
+          {products.map((product) => <Text>{product.item}</Text>)}
         </View>
 ``````
