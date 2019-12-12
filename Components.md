@@ -1,4 +1,4 @@
-### Custom Component:
+#### Custom Component:
 
 We will learn, how to create our own custom components which can be used multiple places whereever is required.
 So lets add a new folder called 'component' inside a project which will have our own custom components.
