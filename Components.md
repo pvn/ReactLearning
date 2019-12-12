@@ -5,7 +5,10 @@ So lets add a new folder called 'component' inside a project which will have our
 
 Before learning the custom component, lets first understand about the most used component in ReactNative called FlatList.
 
-> FlatList has two important properties-
-    > first property is the data property where you point at your input data and this should point at an array
-    > second property is render item, that takes a function which is called for every item
+#### FlatList has two important properties
+
+    first property is the *data* property where you point at your input data 
+    and this should point at an array
+    
+    second property is *renderItem*, that takes a function which is called for every item
 
