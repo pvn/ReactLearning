@@ -29,6 +29,7 @@ renderItem = {product => (
 <View style={styles.listItem}>
     <Text>{product.item.value}</Text>
 </View>
+keyExtractor={product => product.id}
 )}
 />
 ```
