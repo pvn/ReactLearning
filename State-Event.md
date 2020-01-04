@@ -119,7 +119,7 @@ const addProductHandler = () => {
 ``````javascript
 <FlatList 
       keyExtractor={(item, index) => item.id}
-      data={courseGoals} 
+      data={products} 
       renderItem={itemData => (
         <View style={styles.listItem}>
           <Text>{itemData.item.value}</Text>
