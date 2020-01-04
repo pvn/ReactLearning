@@ -89,6 +89,20 @@ const ProductInput = props => {
 }
 ``````
 
+> To find out when a button is pressed in this component and in React, we do that by passing the function which the child component should execute eventually as a [**prop**](https://reactjs.org/docs/components-and-props.html) to the child component.
+
+So here, we could add onAddProduct, that name is totally up to us.
+``````javascript
+<ProductInput onAddProduct/>
+``````
+
+> But This alone won't do anything but onAddProduct will now be received as a prop inside of product input and
+it will point at a function, which means we can execute it as a function there.
+
+``````javascript
+<ProductInput onAddProduct={addProductHandler}/>
+``````
+
 #### Styling:
 We are giving the styles for text field, or we can add the style for any component. 
 
