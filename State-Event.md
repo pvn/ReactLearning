@@ -6,7 +6,7 @@ const App: () => ReactNode = () => {
 
 /*default we have initial state by passing empty string to useState 
 	as user has not entered anything*/
-const [productText, setProductText] = useState('')
+const [productName, setProductName] = useState('')
 
   return (
 	<View style={{padding: 100}}>
