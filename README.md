@@ -7,6 +7,7 @@
 * [Installation](https://github.com/pvn/ReactLearning/blob/master/Installation.md)
 * [Styling](https://github.com/pvn/ReactLearning/blob/master/Styling.md)
 * [State and Events](https://github.com/pvn/ReactLearning/blob/master/State-Event.md)
+* [Custom Component](https://github.com/pvn/ReactLearning/blob/master/CustomComponent.md)
 
 ### Required tools
     Node
