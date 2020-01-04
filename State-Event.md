@@ -1,6 +1,6 @@
 ### State and Events:
 We will use the  [useState](https://reactjs.org/docs/hooks-state.html) hook for that which we import from React, not from ReactNative but from React. 
-We will create two constant here **productText** and **setProductText** with the help of [useState](https://reactjs.org/docs/hooks-state.html)
+We will create two constant here **productName** and **setProductName** with the help of [useState](https://reactjs.org/docs/hooks-state.html)
 ``````javascript
 const App: () => ReactNode = () => {
 
