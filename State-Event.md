@@ -24,7 +24,7 @@ const App: () => ReactNode = () => {
 
 /*default we have initial state by passing empty string to useState 
 	as user has not entered anything*/
-const [productText, setProductText] = useState('')
+const [productName, setProductName] = useState('')
 
 return (
 <View style={{padding: 100}}>
@@ -46,7 +46,7 @@ const App: () => ReactNode = () => {
 
 /*default we have initial state by passing empty string to useState 
 	as user has not entered anything*/
-const [productText, setProductText] = useState('')
+const [productName, setProductName] = useState('')
 
 function productInputHandler(enteredText) {
 	setProductText(enteredText)
@@ -86,7 +86,7 @@ const App: () => ReactNode = () => {
 
 /*default we have initial state by passing empty string to useState 
 	as user has not entered anything*/
-const [productText, setProductText] = useState('')
+const [productName, setProductName] = useState('')
 // to useState hook we are passing empty lists
 const [products, setProducts] = useState([])
 
@@ -100,7 +100,7 @@ const addProductHandler = () => {
 <View style={{padding: 100}}>
 	<View>
 		// onChangeText is a 'props' for TextInput
-		<TextInput placeholder="Enter Product" style={styles.input} 
+		<TextInput placeholder="Enter Product Name" style={styles.input} 
 						onChangeText={productInputHandler} 
 						value={getProductText}/>
 		<Button title="Add Product" onPress={addProductHandler}/>
