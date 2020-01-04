@@ -112,8 +112,17 @@ const addProductHandler = () => {
 
 
 *Output*
+
+> **[FlatList](https://facebook.github.io/react-native/docs/flatlist) component** has two parameters
+*data* and *renderItem*
+
 ``````javascript
-<View>
-          {products.map((product) => <Text>{product.item}</Text>)}
-        </View>
+<FlatList 
+      keyExtractor={(item, index) => item.id}
+      data={courseGoals} 
+      renderItem={itemData => (
+        <View style={styles.listItem}>
+          <Text>{itemData.item.value}</Text>
+        </View> )}
+/>
 ``````
