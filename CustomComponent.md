@@ -103,17 +103,15 @@ it will point at a function, which means we can execute it as a function there.
 <ProductInput onAddProduct={addProductHandler}/>
 ``````
 
-Now, In ProductInput.js Button's onPress method, simply point at *prop.onAddProduct*
+Still we'd have an issue because in *addProductHandler*, because in **App.js** productName and that previously was managed in here but isn't anymore, because we moved to ProductInput.js
+
+So now, in **App.js** *addProductHandler* should actually receive an argument which would be product title or whatever we want
+
+And In ProductInput.js Button's onPress method, simply point at *prop.onAddProduct*
 
 ``````javascript
 <Button title="ADD" onPress={props.onAddProduct.bind(this, productName)} />
 ``````
-
-Still we'd have an issue because in *addProductHandler*, because in **App.js** productName and that previously
-
-was managed in here but isn't anymore, because we moved to ProductInput.js
-
-So now, in **App.js** *addProductHandler* should actually receive an argument which would be product title or whatever we want
 
 ``````javascript
 /*
