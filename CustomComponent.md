@@ -106,7 +106,7 @@ it will point at a function, which means we can execute it as a function there.
 Now, In ProductInput.js Button's onPress method, simply point at *prop.onAddProduct*
 
 ``````javascript
-<Button title="ADD" onPress={addProductHandler} />
+<Button title="ADD" onPress={props.onAddProduct.bind(this, productName)} />
 ``````
 
 Still we'd have an issue because in *addProductHandler*, because in **App.js** productName and that previously
