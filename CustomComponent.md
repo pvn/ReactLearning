@@ -129,6 +129,66 @@ const addProductHandler = productTitle => {
 
 ``````
 
+
+### Final Source Code:
+
+#### ProductInput.js
+
+``````javascript
+import React, { useState } from 'react';
+import {View, Button, TextInput, StyleSheet} from 'react-native'
+
+const ProductInput = props => {
+
+    //state management logic here with get and set entered product name which we get from useState which we initialized
+    const [productName, setProductName] = useState('');
+
+    //so this function which we connect to onChangeText and now with that, fetching the user input
+    const productInputHandler = enteredText => {
+        setProductName(enteredText)
+    };
+    return (
+        <View>
+            <TextInput 
+                placeholder="Enter Product Name" 
+                style={styles.input}
+                onChangeText={productInputHandler} 
+                value={productName}
+            />
+            <Button title="ADD" onPress={props.onAddProduct.bind(this, productName)} />
+        </View>
+    );
+}
+
+``````
+
+#### App.js
+
+``````javascript
+import ProductLists from './components/ProductLists';
+import ProductInput from './components/ProductInput';
+
+export default function App() {
+
+  const [products, setProducts] = useState([])
+
+  const addProductHandler = productTitle => {
+    setProducts(products => [...products, { id: Math.random().toString(), value: productTitle }])
+  }
+
+  return (
+    <View style={{ padding: 100 }}>
+      <ProductInput onAddProduct={addProductHandler}/>
+      <FlatList
+        keyExtractor={(item, index) => item.id}
+        data={products}
+        renderItem={itemData => <ProductLists title={itemData.item.value} />}
+      />
+    </View>
+  );
+} 
+``````
+
 #### Styling:
 We are giving the styles for text field, or we can add the style for any component. 
 
