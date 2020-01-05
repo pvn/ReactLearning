@@ -62,7 +62,7 @@ const productInputHandler = (enteredText) => {
 }
 ``````
 
-#### Version(1):
+#### ProductInput.js (revised):
 
 ``````javascript
 import React, { useState } from 'react';
@@ -102,6 +102,34 @@ it will point at a function, which means we can execute it as a function there.
 ``````javascript
 <ProductInput onAddProduct={addProductHandler}/>
 ``````
+
+Now, In ProductInput.js Button's onPress method, simply point at *prop.onAddProduct*
+
+``````javascript
+<Button title="ADD" onPress={addProductHandler} />
+``````
+
+Still we'd have an issue because in *addProductHandler*, because in **App.js** productName and that previously
+
+was managed in here but isn't anymore, because we moved to ProductInput.js
+
+So now, in **App.js** *addProductHandler* should actually receive an argument which would be product title or whatever we want
+
+``````javascript
+/*
+const addProductHandler = () => {
+    setProducts(products => [...products, { id: Math.random().toString(), value: productName }])
+}
+*/
+
+// addProductHandler should actually receive an argument
+const addProductHandler = productTitle => {
+    setProducts(products => [...products, { id: Math.random().toString(), value: productTitle }])
+}
+
+``````
+
+
 
 #### Styling:
 We are giving the styles for text field, or we can add the style for any component. 
