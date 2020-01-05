@@ -162,7 +162,7 @@ const ProductInput = props => {
 
 ``````
 
-#### App.js
+#### App.js. (After replacing basic component with our custom component which can be easily integrate)
 
 ``````javascript
 import ProductLists from './components/ProductLists';
@@ -178,11 +178,16 @@ export default function App() {
 
   return (
     <View style={{ padding: 100 }}>
+      
+      // Custom component to get the input from user
       <ProductInput onAddProduct={addProductHandler}/>
+      
       <FlatList
         keyExtractor={(item, index) => item.id}
         data={products}
         renderItem={itemData => (
+          
+          // Custom component to list out the product items
           <ProductLists title={itemData.item.value} />
       )}
       />
