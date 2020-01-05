@@ -182,7 +182,9 @@ export default function App() {
       <FlatList
         keyExtractor={(item, index) => item.id}
         data={products}
-        renderItem={itemData => <ProductLists title={itemData.item.value} />}
+        renderItem={itemData => (
+          <ProductLists title={itemData.item.value} />
+      )}
       />
     </View>
   );
