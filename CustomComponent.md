@@ -105,14 +105,16 @@ it will point at a function, which means we can execute it as a function there.
 
 Still we'd have an issue because in *addProductHandler*, because in **App.js** productName and that previously was managed in here but isn't anymore, because we moved to ProductInput.js
 
-So now, in **App.js** *addProductHandler* should actually receive an argument which would be product title or whatever we want
+So now, In **App.js** *addProductHandler* should actually receive an argument which would be product title or whatever we want
 
 And In ProductInput.js Button's onPress method, simply point at *prop.onAddProduct*
 
+**ProductInput.js**
 ``````javascript
 <Button title="ADD" onPress={props.onAddProduct.bind(this, productName)} />
 ``````
 
+**App.js**
 ``````javascript
 /*
 const addProductHandler = () => {
@@ -126,8 +128,6 @@ const addProductHandler = productTitle => {
 }
 
 ``````
-
-
 
 #### Styling:
 We are giving the styles for text field, or we can add the style for any component. 
